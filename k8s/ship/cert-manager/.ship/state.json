@@ -1,0 +1,50 @@
+{
+  "v1": {
+    "config": {},
+    "releaseName": "cert-manager",
+    "namespace": "cert-manager",
+    "upstream": "repository/cert-manager",
+    "metadata": {
+      "applicationType": "helm",
+      "sequence": 0,
+      "icon": "https://raw.githubusercontent.com/jetstack/cert-manager/master/logo/logo.png",
+      "name": "cert-manager",
+      "releaseNotes": "",
+      "version": "v0.13.0",
+      "license": {
+        "id": "",
+        "assignee": "",
+        "createdAt": "0001-01-01T00:00:00Z",
+        "expiresAt": "0001-01-01T00:00:00Z",
+        "type": ""
+      }
+    },
+    "shipVersion": {
+      "version": "0.52.0",
+      "git": "813a93f",
+      "buildTime": "2019-10-19T00:30:53Z",
+      "dependencies": {
+        "helm": "v2.14.1",
+        "kustomize": "v2.0.3",
+        "terraform": "v0.11.14"
+      },
+      "go": {
+        "version": "go1.13.1",
+        "compiler": "gc",
+        "os": "darwin",
+        "arch": "amd64"
+      }
+    },
+    "contentSHA": "57a193d230ef3ce7a625624d07f6044d73d1a09255f4432d0f45f6175205cb8c",
+    "lifecycle": {
+      "stepsCompleted": {
+        "intro": true,
+        "kustomize": true,
+        "kustomize-intro": true,
+        "outro": true,
+        "render": true,
+        "values": true
+      }
+    }
+  }
+}

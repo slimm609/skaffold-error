@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+
+start() {
+  kind create cluster --name "demo" --image "kindest/node:v1.15.7" --config "k8s/kind/config/config.yaml" --verbosity="0"
+  kubectl apply -f k8s/crds/cert-manager-crd.yaml
+}
+
+
+run() {
+            skaffold run -p kind \
+                --label skaffold.dev/run-id="null" \
+                --label app.kubernetes.io/managed-by="skaffold" \
+                --label skaffold.dev/docker-api-version="null"
+}
+
+stop() {
+  kind delete cluster --name "demo" --verbosity="0" 
+}
+eval $@
